@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Actividad</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Loggins</li>
+    </ol>
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+        Loggins
+    </div>
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>27/08/2023</td>
+                    <td>17:00</td>
+                </tr>
+                <tr>
+                    <td>27/08/2023</td>
+                    <td>18:00</td>
+                </tr>
+            
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

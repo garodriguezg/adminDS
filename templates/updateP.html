@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+    <section class="content">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title text-center">Actualizar producto</h3>
+            </div>
+
+            <form class="form-horizontal" method="POST" action="/updateproducto/">
+                {% for row in data %}
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Producto o Servicio</label>
+                        <input name="descripcion" value="{{ row[1] }}" type="text" class="form-control" placeholder="Nombre" autocomplete="off" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Fecha de inicio</label>
+                        <input name="precio" value="{{ row[2] }}" type="text" class="form-control"placeholder="Telefono" autocomplete="off" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Realizada</label>
+                        <input name="stock" value="{{ row[3] }}" type="text" class="form-control" placeholder="Email" autocomplete="off" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Fecha de fin</label>
+                        <input name="categoria" value="{{ row[4] }}" type="text" class="form-control" placeholder="Email" autocomplete="off" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Precio</label>
+                        <input name="marca" value="{{ row[5] }}" type="text" class="form-control" placeholder="Email" autocomplete="off" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Satisfecho</label>
+                        <input name="modelo" value="{{ row[6] }}" type="text" class="form-control" placeholder="Email" autocomplete="off" required>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <a href="/" class="btn btn-secondary">Cancelar</a>
+                    <input name="update" type="submit" class="btn btn-info float-end" value="Actualizar">
+                </div>
+                {% endfor %}
+            </form>
+        </div>
+    </section>
+</div>
+
+
+
+
+{% endblock %}
